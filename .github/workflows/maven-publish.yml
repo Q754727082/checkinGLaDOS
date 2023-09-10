@@ -4,8 +4,8 @@
 name: Maven Package
 
 on:
-  release:
-    types: [created]
+  schedule:
+    - cron: "0 6,9,16,23 * * *"
 
 jobs:
   build:
