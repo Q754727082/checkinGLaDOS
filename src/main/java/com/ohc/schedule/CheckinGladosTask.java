@@ -29,7 +29,7 @@ public class CheckinGladosTask {
     @Autowired
     private RestTemplate restTemplate;
 
-    @Scheduled(cron = "0 0 1,8,15,22 * * ?")
+    @Scheduled(fixedDelay = 5*60*60*1000,initialDelay = 1000)
     public void checkinGlados() {
         pushMessage(checkin());
     }
